@@ -5,15 +5,21 @@ using UnityEngine;
 public class PlayerControllerGun : MonoBehaviour
 {
     //private CharacterController controller;
+    public Transform bullet;
     public LayerMask clickable;
+    public Transform tip;
+    //public UnityEngine.AI.NavMeshAgent agent;
     Vector3 newPosition;
-    private Vector3 playerVelocity;
+    public float playerSpeed;
+    public float shotForce;
+    //private Vector3 targetPosition;
     //private float playerSpeed = 2.0f;
 
     private void Start()
     {
         newPosition = transform.position;
-        print(transform.position + "\n");
+        //agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
+        //print(transform.position + "\n");
         //controller = gameObject.AddComponent<CharacterController>();
     }
 
@@ -39,16 +45,42 @@ public class PlayerControllerGun : MonoBehaviour
             gameObject.transform.forward = move;
         }*/
 
-        if (Input.GetMouseButtonDown(1)) {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100, clickable)) {
-                newPosition = hit.point;
-                print(newPosition + "\n");
-                transform.position = newPosition;
-                print(transform.position + "\n");
-            }
+        transform.right = getMousePosition() - transform.position;
+        
+        if (Input.GetMouseButtonDown(0)) {
+            GetComponentInChildren<GunModel>().PlayAnimation();
+            Transform shotBullet = Instantiate(bullet, tip.position, transform.rotation);
+            shotBullet.GetComponent<Rigidbody>().velocity = shotBullet.right * shotForce;
         }
+        if (Input.GetMouseButtonDown(1)) {
+            newPosition = getMousePosition();
+        }
+        transform.position = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime * playerSpeed);  
         //controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    /*void MoveTo(Transform player, Vector3 destination) {
+        while (transform.position != destination) {
+            transform.position = Vector3.MoveTowards(transform.position, newPosition, playerSpeed);
+            yield return new WaitForSeconds(0.2f);
+        }
+    }*/
+
+    Vector3 getMousePosition() {
+        /*if (Physics.Raycast(ray, out hit, 100, clickable)) {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Vector3 mousePosition = hit.point;
+        mousePosition.y = 5;
+        return mousePosition;*/
+
+        Plane plane = new Plane(Vector3.up,0);
+        float dist;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (plane.Raycast(ray, out dist)) {
+            Vector3 point = ray.GetPoint(dist);
+            return point;
+        }
+        return Vector3.zero;
     }
 }

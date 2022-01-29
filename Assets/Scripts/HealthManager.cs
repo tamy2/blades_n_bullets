@@ -19,5 +19,6 @@ public class HealthManager : MonoBehaviour
         /*if (health <= 0) {
            gameOver(); 
         }*/
+        print(damage + " damage taken!");
     }
 }

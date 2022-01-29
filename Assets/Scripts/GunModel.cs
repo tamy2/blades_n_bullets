@@ -16,13 +16,10 @@ public class GunModel : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlayAnimation();
-        }
+
     }
 
-    void PlayAnimation()
+    public void PlayAnimation()
     {
         GetComponent<Animator>().SetTrigger("shoot");
     }
