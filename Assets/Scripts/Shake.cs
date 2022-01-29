@@ -5,7 +5,6 @@ using UnityEngine;
 public class Shake : MonoBehaviour
 {
     Vector2 currentOffset;
-    public AnimationCurve easing;
 
     public Vector2 GetOffset()
     {
@@ -19,6 +18,8 @@ public class Shake : MonoBehaviour
         {
             currentOffset += Random.insideUnitCircle * power * (1 - currentTime / time);
             currentTime += Time.deltaTime;
+
+
 
             currentOffset = Vector2.Lerp(currentOffset, Vector2.zero, Time.deltaTime * 5);
             yield return null;

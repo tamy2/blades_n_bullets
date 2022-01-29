@@ -18,7 +18,7 @@ public class ChunkSpawner : MonoBehaviour
                 GameObject chunk = chunks[Random.Range(0, chunks.Length)];
                 Vector3 position = basePosition.position + new Vector3(x, 0, y) * chunkSize;
                 Quaternion rotation = Quaternion.Euler(0, Random.Range(0, 4) * 90, 0);
-                Transform chunkInstance = Instantiate(chunk, position, rotation).transform;
+                Transform chunkInstance = Instantiate(chunk, position, rotation, transform).transform;
             }
         }
     }
