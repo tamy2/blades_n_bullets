@@ -12,7 +12,12 @@ ModelImporter:
   - first:
       74: -9155747344478126235
     second: Cube.004|Fire.001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gun
+    second: {fileID: 2100000, guid: c39decd31d6d74b41a6e2d85619c7c16, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

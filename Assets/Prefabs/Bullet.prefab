@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 5438364628353727075}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_Children: []
   m_Father: {fileID: 2202337976318950198}
   m_RootOrder: 0
@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 5640224359891495027}
   - component: {fileID: 7027908771409386511}
   - component: {fileID: 2627386934330984170}
+  - component: {fileID: 8466829594780144051}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -190,6 +191,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 4
+--- !u!114 &8466829594780144051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640224359891495031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 12
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &592654811264632684
 PrefabInstance:
   m_ObjectHideFlags: 0
