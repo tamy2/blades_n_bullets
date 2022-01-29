@@ -18,7 +18,6 @@ public class Shake : MonoBehaviour
         while (currentTime < time)
         {
             currentOffset += Random.insideUnitCircle * power * (1 - currentTime / time);
-
             currentTime += Time.deltaTime;
 
             currentOffset = Vector2.Lerp(currentOffset, Vector2.zero, Time.deltaTime * 5);
