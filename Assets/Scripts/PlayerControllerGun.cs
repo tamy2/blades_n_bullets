@@ -27,6 +27,10 @@ public class PlayerControllerGun : MonoBehaviour
 
     void Update()
     {
+        if (!SequencingManager.isGameRunning)
+        {
+            return;
+        }
         //Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         //controller.Move(move * Time.deltaTime * playerSpeed);
 

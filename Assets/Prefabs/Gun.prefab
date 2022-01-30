@@ -51,6 +51,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   tip: {fileID: 3613829493540755711}
+  audioSource: {fileID: 3613829495188083993}
   playerSpeed: 40
   shotForce: 100
 --- !u!114 &3613829495188083996
@@ -425,6 +426,21 @@ PrefabInstance:
       propertyPath: healthManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7060013961104325745, guid: 56921842133a33843a9b292001bb4959,
+        type: 3}
+      propertyPath: renderers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060013961104325745, guid: 56921842133a33843a9b292001bb4959,
+        type: 3}
+      propertyPath: renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1073172205848899312}
+    - target: {fileID: 7060013961104325745, guid: 56921842133a33843a9b292001bb4959,
+        type: 3}
+      propertyPath: renderers.Array.data[1]
+      value: 
+      objectReference: {fileID: 7921898904020327178}
     - target: {fileID: 7443952331127260726, guid: 56921842133a33843a9b292001bb4959,
         type: 3}
       propertyPath: m_Name
@@ -440,6 +456,18 @@ PrefabInstance:
 --- !u!4 &1342247335096743261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2343692673008287651, guid: 56921842133a33843a9b292001bb4959,
+    type: 3}
+  m_PrefabInstance: {fileID: 3613829495204596478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1073172205848899312 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4378143873643176974, guid: 56921842133a33843a9b292001bb4959,
+    type: 3}
+  m_PrefabInstance: {fileID: 3613829495204596478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7921898904020327178 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6905948780668899828, guid: 56921842133a33843a9b292001bb4959,
     type: 3}
   m_PrefabInstance: {fileID: 3613829495204596478}
   m_PrefabAsset: {fileID: 0}
