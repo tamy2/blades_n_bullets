@@ -6,12 +6,33 @@ public class Hurtbox : MonoBehaviour
 {
     public bool isEnemy;
     public HealthManager healthManager;
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        
-    }*/
 
+    public Renderer[] renderers;
+
+    private Material mat;
+    // Start is called before the first frame update
+
+    void Start()
+    {
+        if (renderers.Length == 0)
+        {
+            return;
+        }
+
+        mat = Material.Instantiate(renderers[0].material);
+        foreach (Renderer renderer in renderers)
+        {
+            renderer.material = mat;
+        }
+    }
+
+    void Update()
+    {
+        if (mat && Input.GetKeyDown(KeyCode.F))
+        {
+            StartCoroutine(FlashModel());
+        }
+    }
     // Update is called once per frame
     /*void Update()
     {
@@ -33,5 +54,12 @@ public class Hurtbox : MonoBehaviour
     }
     */
 
+    public IEnumerator FlashModel()
+    {
+        Texture tex = mat.GetTexture("_MainTex");
+        mat.SetTexture("_MainTex", null);
+        yield return new WaitForSeconds(0.1f);
+        mat.SetTexture("_MainTex", tex);
+    }
 
 }
