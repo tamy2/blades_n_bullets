@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8219001887425436088
 Transform:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8468310836765335337}
   healthManager: {fileID: 8468310836765335336}
-  enemySpeed: 20
+  enemySpeed: 30
   rotationSpeed: 3
   sword: {fileID: 0}
   gun: {fileID: 0}

@@ -44,7 +44,7 @@ public class SequencingManager : MonoBehaviour
             camera.rotation = Quaternion.Lerp(camera.rotation, target.rotation, Time.deltaTime * cameraSpeed);
         }
 
-        if (isGameRunning)
+        if (!died && isGameRunning)
         {
             timeAlive += Time.deltaTime;
             timerReadout.text = timeAlive.ToString("F2");

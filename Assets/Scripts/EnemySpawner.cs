@@ -37,6 +37,6 @@ public class EnemySpawner : MonoBehaviour
     void SpawnWave()
     {
         GameObject wave = waveVariations[Random.Range(0, waveVariations.Length)];
-        Instantiate(wave, spawnPoint.position, Quaternion.identity);
+        Instantiate(wave, spawnPoint.position, Quaternion.identity).SetActive(true);
     }
 }

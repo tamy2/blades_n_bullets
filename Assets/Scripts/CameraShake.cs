@@ -21,6 +21,11 @@ public class CameraShake : MonoBehaviour
         basePos = SequencingManager.instance.gameCameraTransform.position;
     }
 
+    public void Shake(int strength = 1)
+    {
+        StartCoroutine(shake.DoShake(0.25f * strength, 5 * strength));
+    }
+
     void Update()
     {
         if (shake.GetOffset().magnitude > 0)

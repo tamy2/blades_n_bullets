@@ -6,7 +6,8 @@ public class GrenadeController : EnemyController
 {
     public Transform explosion;
     //public float fallSpeed;
-    public void Update() {
+    public void Update()
+    {
         //checkDeath();
         target = rb.position + new Vector3(0, 0, -1);
         moveTowardsPosition(target);
@@ -17,8 +18,10 @@ public class GrenadeController : EnemyController
         Explode();
     }*/
 
-    public void Explode() {
+    public void Explode()
+    {
         Transform explode = Instantiate(explosion, rb.position, transform.rotation);
+        CameraShake.instance.Shake(3);
         Destroy(gameObject);
         //explosion.isPlaying = true;
 

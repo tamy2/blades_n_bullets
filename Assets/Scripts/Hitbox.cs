@@ -8,6 +8,7 @@ public class Hitbox : MonoBehaviour
     public bool oneHit; //does hitbox dissipate
     public bool friendlyFire;
     public int damage;
+    public bool destroyOnHit;
 
     // Start is called before the first frame update
     /*void Start()
@@ -27,15 +28,23 @@ public class Hitbox : MonoBehaviour
         {
             return;
         }
+
         Hurtbox opponent = other.GetComponent<Hurtbox>();
         if (opponent != null)
         {
             if (isEnemy != opponent.isEnemy || friendlyFire)
             {
                 opponent.FlashModel();
-                opponent.healthManager.takeDamage(damage);
+                if (opponent.healthManager)
+                {
+                    opponent.healthManager.takeDamage(damage);
+                }
                 opponent.PlaySound();
-                StartCoroutine(CameraShake.instance.shake.DoShake(0.25f, 5));
+                CameraShake.instance.Shake();
+                if (destroyOnHit)
+                {
+                    Destroy(transform.parent.gameObject);
+                }
                 //print(other + "took damage");
                 //player hitbox hits everyone
                 //other.GetComponent<Hurtbox>.knockbackManager.knockback(vector);

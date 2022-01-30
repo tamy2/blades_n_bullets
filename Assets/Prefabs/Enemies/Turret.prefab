@@ -90,7 +90,7 @@ MonoBehaviour:
   shotFrequency: 3
   bulletPrefab: {fileID: 5640224359891495027, guid: 39a6f679da2d16347bf7732c6a7a913e,
     type: 3}
-  shotForce: 45
+  shotForce: 30
 --- !u!54 &8755988535022190404
 Rigidbody:
   m_ObjectHideFlags: 0
