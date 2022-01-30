@@ -32,9 +32,10 @@ public class Hitbox : MonoBehaviour
         {
             if (isEnemy != opponent.isEnemy || friendlyFire)
             {
-                StartCoroutine(opponent.FlashModel());
+                opponent.FlashModel();
                 opponent.healthManager.takeDamage(damage);
                 opponent.PlaySound();
+                StartCoroutine(CameraShake.instance.shake.DoShake(0.25f, 5));
                 //print(other + "took damage");
                 //player hitbox hits everyone
                 //other.GetComponent<Hurtbox>.knockbackManager.knockback(vector);

@@ -13,13 +13,15 @@ public class Turret : EnemyController
 
     void Update()
     {
-        if (Mathf.Abs((sword.position - rb.position).magnitude) <= Mathf.Abs((gun.position - rb.position).magnitude))
+        checkDeath();
+
+        if (Mathf.Abs((sword.transform.position - rb.position).magnitude) <= Mathf.Abs((gun.transform.position - rb.position).magnitude))
         {
-            target = sword.position;
+            target = sword.transform.position;
         }
         else
         {
-            target = gun.position;
+            target = gun.transform.position;
         }
 
         rotateTowardsPosition(target);
@@ -34,7 +36,7 @@ public class Turret : EnemyController
 
     void ShootBullet()
     {
-        Transform shotBullet = Instantiate(bulletPrefab, tip.position, transform.rotation);
+        Transform shotBullet = Instantiate(bulletPrefab, tip.position, tip.rotation);
         shotBullet.GetComponent<Rigidbody>().velocity = shotBullet.right * shotForce;
     }
 }

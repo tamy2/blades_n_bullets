@@ -15,25 +15,35 @@ public class HealthManager : MonoBehaviour
     }
     */
 
-    private void Start() {
+    private void Start()
+    {
         currentHealth = fullHealth;
     }
 
-    public int GetHealth() {
+    public int GetHealth()
+    {
         return currentHealth;
     }
 
-    public void takeDamage(int damage) {
+    public void takeDamage(int damage)
+    {
         currentHealth = currentHealth - damage;
         /*if (health <= 0) {
            gameOver(); 
         }*/
-        float ratio = (float) currentHealth/ (float) fullHealth;
-        if (ratio < 0) {
+        float ratio = (float)currentHealth / (float)fullHealth;
+        if (ratio < 0)
+        {
             ratio = 0;
         }
-        if (isEnemy != true) {
+        if (isEnemy != true)
+        {
             bar.OnDamageTaken(ratio);
+        }
+
+        if (ratio <= 0 && gameObject.name == "Game Handler")
+        {
+            SequencingManager.instance.End();
         }
         //print(damage + " damage taken!");
         //print("current total health: " + currentHealth);

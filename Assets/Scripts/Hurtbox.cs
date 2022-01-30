@@ -13,6 +13,8 @@ public class Hurtbox : MonoBehaviour
     Texture tex;
     public AudioSource audioSource;
 
+    private float flashTime;
+
     // Start is called before the first frame update
 
     void Start()
@@ -32,10 +34,11 @@ public class Hurtbox : MonoBehaviour
 
     void Update()
     {
-        if (mat && Input.GetKeyDown(KeyCode.F))
+        if (flashTime < 0)
         {
-            StartCoroutine(FlashModel());
+            mat.SetTexture("_MainTex", tex);
         }
+        flashTime -= Time.deltaTime;
     }
     // Update is called once per frame
     /*void Update()
@@ -63,11 +66,10 @@ public class Hurtbox : MonoBehaviour
         audioSource.Play();
     }
 
-    public IEnumerator FlashModel()
+    public void FlashModel()
     {
         mat.SetTexture("_MainTex", null);
-        yield return new WaitForSeconds(0.1f);
-        mat.SetTexture("_MainTex", tex);
+        flashTime = 0.1f;
     }
 
 }
