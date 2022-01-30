@@ -28,10 +28,13 @@ public class HealthManager : MonoBehaviour
            gameOver(); 
         }*/
         float ratio = (float) currentHealth/ (float) fullHealth;
+        if (ratio < 0) {
+            ratio = 0;
+        }
         bar.OnDamageTaken(ratio);
-        print(damage + " damage taken!");
-        print("current total health: " + currentHealth);
-        print("Full health: " + fullHealth);
-        print("current health ratio: " + currentHealth/fullHealth);
+        //print(damage + " damage taken!");
+        //print("current total health: " + currentHealth);
+        //print("Full health: " + fullHealth);
+        //print("current health ratio: " + currentHealth/fullHealth);
     }
 }
