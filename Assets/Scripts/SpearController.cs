@@ -8,10 +8,10 @@ public class SpearController : EnemyController
 {
     public void Update() {
         checkDeath();
-        if (Mathf.Abs((sword.position - rb.position).magnitude) <= Mathf.Abs((gun.position - rb.position).magnitude)) {
-            target = sword.position;
+        if (Mathf.Abs((swordPos.position - rb.position).magnitude) <= Mathf.Abs((gunPos.position - rb.position).magnitude)) {
+            target = swordPos.position;
         } else {
-            target = gun.position;
+            target = gunPos.position;
         }
         moveTowardsPosition(tip.position);
         rotateTowardsPosition(target);

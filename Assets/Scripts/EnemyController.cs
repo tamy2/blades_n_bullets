@@ -13,8 +13,10 @@ public class EnemyController : MonoBehaviour
     public float enemySpeed;
     public float rotationSpeed;
     Quaternion targetRot;
-    public Transform sword;
-    public Transform gun;
+    public PlayerControllerSword sword;
+    public PlayerControllerGun gun;
+    public Transform swordPos;
+    public Transform gunPos;
     public Transform tip;
     public Vector3 target;
 
@@ -23,9 +25,13 @@ public class EnemyController : MonoBehaviour
     }*/
 
     // Start is called before the first frame update
-    /*protected virtual void Start() {
-       currentHealth = fullHealth;
-    }*/
+    void Start() {
+        //FindObjectOfType(PlayerControllerSword).transform;
+        sword = (PlayerControllerSword) FindObjectOfType(typeof(PlayerControllerSword));
+        gun = (PlayerControllerGun) FindObjectOfType(typeof(PlayerControllerGun));
+        swordPos = sword.transform;
+        gunPos = gun.transform;
+    }
 
     // Update is called once per frame
     /*protected virtual void Update() {
