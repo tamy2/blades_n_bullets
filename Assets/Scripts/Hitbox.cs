@@ -28,8 +28,9 @@ public class Hitbox : MonoBehaviour
         Hurtbox opponent = other.GetComponent<Hurtbox>();
         if (opponent != null) {
             if (isEnemy != opponent.isEnemy || friendlyFire) {
+                StartCoroutine(opponent.FlashModel());
                 opponent.healthManager.takeDamage(damage);
-                print(other + "took damage");
+                //print(other + "took damage");
                 //player hitbox hits everyone
                 //other.GetComponent<Hurtbox>.knockbackManager.knockback(vector);
             }
