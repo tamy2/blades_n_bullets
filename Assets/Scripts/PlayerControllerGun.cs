@@ -8,6 +8,7 @@ public class PlayerControllerGun : MonoBehaviour
     public Transform bullet;
     public LayerMask clickable;
     public Transform tip;
+    public AudioSource audioSource;
     //public UnityEngine.AI.NavMeshAgent agent;
     Vector3 newPosition;
     public float playerSpeed;
@@ -50,15 +51,19 @@ public class PlayerControllerGun : MonoBehaviour
         right.y = 0;
         transform.right = right;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !BalanceManager.instance.gunDisabled)
         {
             GetComponentInChildren<GunModel>().PlayAnimation();
             Transform shotBullet = Instantiate(bullet, tip.position, transform.rotation);
             shotBullet.GetComponent<Rigidbody>().velocity = shotBullet.right * shotForce;
+
+            BalanceManager.instance.AddToGun();
+            audioSource.Play();
         }
         if (Input.GetMouseButtonDown(1))
         {
             newPosition = getMousePosition();
+
         }
         transform.position = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime * playerSpeed);
         //controller.Move(playerVelocity * Time.deltaTime);
