@@ -6,6 +6,7 @@ public class HealthManager : MonoBehaviour
 {
     public int fullHealth;
     private int currentHealth;
+    public bool isEnemy;
     public HealthBar bar;
 
     /*
@@ -31,7 +32,9 @@ public class HealthManager : MonoBehaviour
         if (ratio < 0) {
             ratio = 0;
         }
-        bar.OnDamageTaken(ratio);
+        if (isEnemy != true) {
+            bar.OnDamageTaken(ratio);
+        }
         //print(damage + " damage taken!");
         //print("current total health: " + currentHealth);
         //print("Full health: " + fullHealth);
