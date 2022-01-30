@@ -10,6 +10,8 @@ public class Hurtbox : MonoBehaviour
     public Renderer[] renderers;
 
     private Material mat;
+    Texture tex;
+
     // Start is called before the first frame update
 
     void Start()
@@ -20,6 +22,7 @@ public class Hurtbox : MonoBehaviour
         }
 
         mat = Material.Instantiate(renderers[0].material);
+        tex = mat.GetTexture("_MainTex");
         foreach (Renderer renderer in renderers)
         {
             renderer.material = mat;
@@ -56,7 +59,6 @@ public class Hurtbox : MonoBehaviour
 
     public IEnumerator FlashModel()
     {
-        Texture tex = mat.GetTexture("_MainTex");
         mat.SetTexture("_MainTex", null);
         yield return new WaitForSeconds(0.1f);
         mat.SetTexture("_MainTex", tex);
