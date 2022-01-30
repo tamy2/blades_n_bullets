@@ -6,7 +6,7 @@ public class PlayerControllerGun : MonoBehaviour
 {
     //private CharacterController controller;
     public Transform bullet;
-    //public LayerMask clickable;
+    public LayerMask clickable;
     public Transform tip;
     //public UnityEngine.AI.NavMeshAgent agent;
     Vector3 newPosition;
