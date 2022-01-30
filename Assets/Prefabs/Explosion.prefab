@@ -4892,12 +4892,12 @@ PrefabInstance:
     - target: {fileID: 97723664486432281, guid: e0dd5ea0b7b76ab44a318c3b19fa7aba,
         type: 3}
       propertyPath: m_Size.x
-      value: 95
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 97723664486432281, guid: e0dd5ea0b7b76ab44a318c3b19fa7aba,
         type: 3}
       propertyPath: m_Size.z
-      value: 95
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1259348455614479457, guid: e0dd5ea0b7b76ab44a318c3b19fa7aba,
         type: 3}
