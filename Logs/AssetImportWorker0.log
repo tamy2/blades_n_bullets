@@ -599,3 +599,11 @@ Received Import Request.
 Start importing Packages/com.unity.xr.legacyinputhelpers/Prefabs/XRRig.prefab using Guid(c116b7497ab8ca34c9188965d4295e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e5402df3ba6997afeb4e074ac5eb80') in 0.043119 seconds 
   Import took 0.066352 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 372.767941 seconds.
+  path: Assets/Scripts/HealthManager.cs
+  artifactKey: Guid(c60d039a98a373641b87e1f7a55b5743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HealthManager.cs using Guid(c60d039a98a373641b87e1f7a55b5743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e7f8bbf463dfdc1bd8766e81323bdc') in 0.003015 seconds 
+  Import took 0.038872 seconds .
+

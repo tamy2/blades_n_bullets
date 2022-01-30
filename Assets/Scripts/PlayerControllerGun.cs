@@ -15,6 +15,7 @@ public class PlayerControllerGun : MonoBehaviour
     //private Vector3 targetPosition;
     //private float playerSpeed = 2.0f;
 
+
     private void Start()
     {
         newPosition = transform.position;
@@ -45,17 +46,21 @@ public class PlayerControllerGun : MonoBehaviour
             gameObject.transform.forward = move;
         }*/
 
-        transform.right = getMousePosition() - transform.position;
-        
-        if (Input.GetMouseButtonDown(0)) {
+        Vector3 right = getMousePosition() - transform.position;
+        right.y = 0;
+        transform.right = right;
+
+        if (Input.GetMouseButtonDown(0))
+        {
             GetComponentInChildren<GunModel>().PlayAnimation();
             Transform shotBullet = Instantiate(bullet, tip.position, transform.rotation);
             shotBullet.GetComponent<Rigidbody>().velocity = shotBullet.right * shotForce;
         }
-        if (Input.GetMouseButtonDown(1)) {
+        if (Input.GetMouseButtonDown(1))
+        {
             newPosition = getMousePosition();
         }
-        transform.position = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime * playerSpeed);  
+        transform.position = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime * playerSpeed);
         //controller.Move(playerVelocity * Time.deltaTime);
     }
 
@@ -66,20 +71,16 @@ public class PlayerControllerGun : MonoBehaviour
         }
     }*/
 
-    Vector3 getMousePosition() {
-        /*if (Physics.Raycast(ray, out hit, 100, clickable)) {
+    Vector3 getMousePosition()
+    {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 mousePosition = hit.point;
-        mousePosition.y = 5;
-        return mousePosition;*/
+        if (Physics.Raycast(ray, out hit, 500, clickable))
+        {
+            Vector3 mousePosition = hit.point;
+            mousePosition.y = 5;
+            return mousePosition;
 
-        Plane plane = new Plane(Vector3.up,0);
-        float dist;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (plane.Raycast(ray, out dist)) {
-            Vector3 point = ray.GetPoint(dist);
-            return point;
         }
         return Vector3.zero;
     }
