@@ -8,6 +8,7 @@ public class ChunkSpawner : MonoBehaviour
     public float chunkSize;
     public Transform basePosition;
     public Vector2 numChunks;
+    public float scrollSpeed;
 
     void Start()
     {
@@ -25,6 +26,6 @@ public class ChunkSpawner : MonoBehaviour
 
     void Update()
     {
-
+        transform.Translate(Vector3.back * scrollSpeed * Time.deltaTime);
     }
 }
