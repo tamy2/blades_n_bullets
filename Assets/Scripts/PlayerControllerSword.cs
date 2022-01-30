@@ -35,7 +35,7 @@ public class PlayerControllerSword : MonoBehaviour
         // transform.forward = Vector3.Lerp(transform.forward, targetDir, Time.deltaTime * rotationSpeed);
         // if (Vector3.Dot(transform.forward, targetDir) == -1) {
         //    transform.forward = Quaternion.AngleAxis(0.1f, Vector3.up) * transform.forward; 
-        // }
+        // }    
 
         //speed up? slow down?
         //controller.Move(move * Time.deltaTime * playerSpeed);

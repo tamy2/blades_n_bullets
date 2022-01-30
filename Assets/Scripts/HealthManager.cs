@@ -4,25 +4,34 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    public int health;
+    public int fullHealth;
+    private int currentHealth;
+    public HealthBar bar;
 
+    /*
+    public HealthManager(int health) {
+        this.health = currentHealth;
+    }
+    */
 
-    public HealthManager(int health)
-    {
-        this.health = health;
+    private void Start() {
+        currentHealth = fullHealth;
     }
 
-    public int GetHealth()
-    {
-        return health;
+    public int GetHealth() {
+        return currentHealth;
     }
 
-    public void takeDamage(int damage)
-    {
-        health = health - damage;
+    public void takeDamage(int damage) {
+        currentHealth = currentHealth - damage;
         /*if (health <= 0) {
            gameOver(); 
         }*/
+        float ratio = (float) currentHealth/ (float) fullHealth;
+        bar.OnDamageTaken(ratio);
         print(damage + " damage taken!");
+        print("current total health: " + currentHealth);
+        print("Full health: " + fullHealth);
+        print("current health ratio: " + currentHealth/fullHealth);
     }
 }
