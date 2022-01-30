@@ -50,4 +50,6 @@ public class HealthManager : MonoBehaviour
         //print("Full health: " + fullHealth);
         //print("current health ratio: " + currentHealth/fullHealth);
     }
+
+    
 }

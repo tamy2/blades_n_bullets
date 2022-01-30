@@ -2,19 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-
-public class Bullet : MonoBehaviour
+public class Explosion : MonoBehaviour
 {
     public int destroyTime;
 
+    // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, destroyTime);
-    }
-
-    void OnCollisionEnter(Collision collisionInfo)
-    {
-        Destroy(gameObject, 0.1f);
     }
 }
