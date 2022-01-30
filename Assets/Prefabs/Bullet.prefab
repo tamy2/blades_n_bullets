@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2202337976318950198}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: ExplodeOnImpact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 644877256495228674}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: ExplodeOnImpact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 8466829594780144051}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: ExplodeOnImpact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,6 +221,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hitbox
       objectReference: {fileID: 0}
+    - target: {fileID: 1259348455614479457, guid: e0dd5ea0b7b76ab44a318c3b19fa7aba,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
     - target: {fileID: 4905768838352956028, guid: e0dd5ea0b7b76ab44a318c3b19fa7aba,
         type: 3}
       propertyPath: m_RootOrder
@@ -275,6 +280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907667507345471109, guid: e0dd5ea0b7b76ab44a318c3b19fa7aba,
+        type: 3}
+      propertyPath: destroyOnHit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5907667507345471109, guid: e0dd5ea0b7b76ab44a318c3b19fa7aba,
         type: 3}

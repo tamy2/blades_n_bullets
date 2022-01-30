@@ -13,13 +13,13 @@ public class Turret : EnemyController
 
     void Update()
     {
-        if (Mathf.Abs((sword.position - rb.position).magnitude) <= Mathf.Abs((gun.position - rb.position).magnitude))
+        if (Mathf.Abs((sword.transform.position - rb.position).magnitude) <= Mathf.Abs((gun.transform.position - rb.position).magnitude))
         {
-            target = sword.position;
+            target = sword.transform.position;
         }
         else
         {
-            target = gun.position;
+            target = gun.transform.position;
         }
 
         rotateTowardsPosition(target);

@@ -7,7 +7,9 @@ public class Hitbox : MonoBehaviour
     public bool isEnemy;
     public bool oneHit; //does hitbox dissipate
     public bool friendlyFire;
+    public bool destroyOnHit;
     public int damage;
+    
 
     // Start is called before the first frame update
     /*void Start()
@@ -35,6 +37,9 @@ public class Hitbox : MonoBehaviour
                 StartCoroutine(opponent.FlashModel());
                 opponent.healthManager.takeDamage(damage);
                 opponent.PlaySound();
+                if (destroyOnHit) {
+                    Destroy(transform.parent.gameObject);
+                }
                 //print(other + "took damage");
                 //player hitbox hits everyone
                 //other.GetComponent<Hurtbox>.knockbackManager.knockback(vector);
