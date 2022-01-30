@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
     private float currentValue;
     private Vector3 basePos;
 
-    private float health = 1;
+    //private float health = 1;
 
     public Shake shake;
 
@@ -45,7 +45,7 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    void OnDamageTaken(float ratio)
+    public void OnDamageTaken(float ratio)
     {
         timeSinceHit = 0;
         currentValue = ratio;
