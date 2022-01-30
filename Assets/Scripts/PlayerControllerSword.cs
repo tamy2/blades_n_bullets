@@ -25,6 +25,11 @@ public class PlayerControllerSword : MonoBehaviour
 
     void Update()
     {
+        if (!SequencingManager.isGameRunning)
+        {
+            return;
+        }
+
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
         Vector3 move = new Vector3(moveHorizontal, 0, moveVertical);

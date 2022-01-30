@@ -21,15 +21,20 @@ public class Hitbox : MonoBehaviour
         
     }*/
 
-    void OnTriggerEnter(Collider other) {
-        if (transform.parent == other.transform.parent) {
+    void OnTriggerEnter(Collider other)
+    {
+        if (transform.parent == other.transform.parent)
+        {
             return;
         }
         Hurtbox opponent = other.GetComponent<Hurtbox>();
-        if (opponent != null) {
-            if (isEnemy != opponent.isEnemy || friendlyFire) {
+        if (opponent != null)
+        {
+            if (isEnemy != opponent.isEnemy || friendlyFire)
+            {
                 StartCoroutine(opponent.FlashModel());
                 opponent.healthManager.takeDamage(damage);
+                opponent.PlaySound();
                 //print(other + "took damage");
                 //player hitbox hits everyone
                 //other.GetComponent<Hurtbox>.knockbackManager.knockback(vector);

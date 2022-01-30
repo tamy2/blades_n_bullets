@@ -136,6 +136,7 @@ MonoBehaviour:
   playerSpeed: 30
   rb: {fileID: 3759011001323196948}
   rotationSpeed: 5
+  audioSource: {fileID: 3759011001323196945}
 --- !u!54 &3759011001323196948
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -368,6 +369,16 @@ PrefabInstance:
       propertyPath: healthManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7060013960406240868, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: renderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060013960406240868, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 5464156772693748950}
     - target: {fileID: 8485301857910235246, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
       propertyPath: m_Name
@@ -395,6 +406,12 @@ Transform:
 --- !u!95 &893394554573014750 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4057542105048947243, guid: baa87b0ad8f8d1044a1201031ceca78e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3759011000862760181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5464156772693748950 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9222849995328286755, guid: baa87b0ad8f8d1044a1201031ceca78e,
     type: 3}
   m_PrefabInstance: {fileID: 3759011000862760181}
   m_PrefabAsset: {fileID: 0}

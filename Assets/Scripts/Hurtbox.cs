@@ -11,6 +11,7 @@ public class Hurtbox : MonoBehaviour
 
     private Material mat;
     Texture tex;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
 
@@ -56,6 +57,11 @@ public class Hurtbox : MonoBehaviour
         }
     }
     */
+
+    public void PlaySound()
+    {
+        audioSource.Play();
+    }
 
     public IEnumerator FlashModel()
     {
