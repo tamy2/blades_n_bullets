@@ -22,7 +22,9 @@ public class GrenadeController : EnemyController
     {
         Transform explode = Instantiate(explosion, rb.position, transform.rotation);
         CameraShake.instance.Shake(3);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        Destroy(gameObject, 1f);
+        Destroy(explode.gameObject, 0.5f);
         //explosion.isPlaying = true;
 
         //disable everything, enable explosion for 0.2 seconds

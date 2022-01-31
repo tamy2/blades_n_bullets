@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3759011001158998516}
   m_Layer: 0
   m_Name: Pointer
-  m_TagString: Untagged
+  m_TagString: ExplodeOnImpact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3759011001323196945}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: ExplodeOnImpact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   attackRange: 0
   playerSpeed: 30
   rb: {fileID: 3759011001323196948}
-  rotationSpeed: 5
+  rotationSpeed: 0
   audioSource: {fileID: 3759011001323196945}
 --- !u!54 &3759011001323196948
 Rigidbody:
@@ -276,13 +276,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1114498608179956772, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114498608179956772, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
       propertyPath: friendlyFire
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781911663635496646, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918520368209793245, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.42
       objectReference: {fileID: 0}
     - target: {fileID: 3816120805226940682, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554381953559476114, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4554381953559476114, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
@@ -294,6 +314,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5016949435067321144, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740992534498320823, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.84
+      objectReference: {fileID: 0}
     - target: {fileID: 5760425427212175040, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
       propertyPath: m_Name
@@ -303,6 +333,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760425427212175040, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
       objectReference: {fileID: 0}
     - target: {fileID: 6407687259311666393, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
@@ -361,8 +396,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6904038018937947320, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904038018937947320, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
       propertyPath: m_Size.y
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7060013960406240868, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
@@ -379,6 +419,11 @@ PrefabInstance:
       propertyPath: renderers.Array.data[0]
       value: 
       objectReference: {fileID: 5464156772693748950}
+    - target: {fileID: 7293391407668856351, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
     - target: {fileID: 8485301857910235246, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
       propertyPath: m_Name
@@ -389,10 +434,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8485301857910235246, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
     - target: {fileID: 8765488244896299344, guid: baa87b0ad8f8d1044a1201031ceca78e,
         type: 3}
       propertyPath: m_Name
       value: Sword Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 8765488244896299344, guid: baa87b0ad8f8d1044a1201031ceca78e,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 868724848, guid: baa87b0ad8f8d1044a1201031ceca78e, type: 3}

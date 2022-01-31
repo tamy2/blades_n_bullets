@@ -143,7 +143,7 @@ MonoBehaviour:
   gunPos: {fileID: 0}
   tip: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
-  distanceFromGun: 0
+  distanceFromGun: 20
 --- !u!114 &7304762453977956905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c60d039a98a373641b87e1f7a55b5743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHealth: 40
+  fullHealth: 60
   isEnemy: 1
   bar: {fileID: 0}
 --- !u!1001 &7304762452934197033

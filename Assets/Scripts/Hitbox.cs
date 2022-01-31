@@ -26,8 +26,12 @@ public class Hitbox : MonoBehaviour
     {
         if (transform.parent == other.transform.parent)
         {
+            print("Returned on: " + transform.parent.name + " hit " + other.transform.name);
+
             return;
         }
+
+        print(transform.parent.name + " hit " + other.transform.name);
 
         Hurtbox opponent = other.GetComponent<Hurtbox>();
         if (opponent != null)

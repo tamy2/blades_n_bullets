@@ -23,6 +23,7 @@ public class BalanceManager : MonoBehaviour
     public float disableTime;
 
     private float currentUnits;
+    private Outline swordOutline, gunOutline;
 
     void Awake()
     {
@@ -32,6 +33,8 @@ public class BalanceManager : MonoBehaviour
     void Start()
     {
         currentUnits = totalUnits / 2;
+        swordOutline = FindObjectOfType<PlayerControllerSword>().GetComponent<Outline>();
+        gunOutline = FindObjectOfType<PlayerControllerGun>().GetComponent<Outline>();
     }
 
     void Update()
@@ -68,7 +71,9 @@ public class BalanceManager : MonoBehaviour
     IEnumerator DisableWeapon(bool sword)
     {
         Image image = sword ? swordIcon : gunIcon;
+        Outline outline = sword ? swordOutline : gunOutline;
         image.color = Color.red;
+        outline.OutlineColor = Color.red;
         if (sword)
         {
             swordDisabled = true;
@@ -81,6 +86,7 @@ public class BalanceManager : MonoBehaviour
         yield return new WaitForSeconds(disableTime);
 
         image.color = Color.white;
+        outline.OutlineColor = Color.white;
         if (sword)
         {
             swordDisabled = false;

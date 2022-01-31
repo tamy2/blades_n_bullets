@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3613829495188083993}
   m_Layer: 0
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: ExplodeOnImpact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,6 +175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3613829495188083994}
     m_Modifications:
+    - target: {fileID: 759212364, guid: 56921842133a33843a9b292001bb4959, type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
     - target: {fileID: 759212365, guid: 56921842133a33843a9b292001bb4959, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -202,6 +206,10 @@ PrefabInstance:
     - target: {fileID: 759212365, guid: 56921842133a33843a9b292001bb4959, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697403392, guid: 56921842133a33843a9b292001bb4959, type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
       objectReference: {fileID: 0}
     - target: {fileID: 1697403393, guid: 56921842133a33843a9b292001bb4959, type: 3}
       propertyPath: m_LocalScale.x
@@ -250,6 +258,15 @@ PrefabInstance:
     - target: {fileID: 1697403393, guid: 56921842133a33843a9b292001bb4959, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084057993, guid: 56921842133a33843a9b292001bb4959, type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
+    - target: {fileID: 202657016761963977, guid: 56921842133a33843a9b292001bb4959,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
       objectReference: {fileID: 0}
     - target: {fileID: 2343692673008287651, guid: 56921842133a33843a9b292001bb4959,
         type: 3}
@@ -306,6 +323,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2865053352505525723, guid: 56921842133a33843a9b292001bb4959,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
     - target: {fileID: 3209208860834406241, guid: 56921842133a33843a9b292001bb4959,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -345,6 +367,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022184700784596219, guid: 56921842133a33843a9b292001bb4959,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
       objectReference: {fileID: 0}
     - target: {fileID: 4554381954591966599, guid: 56921842133a33843a9b292001bb4959,
         type: 3}
@@ -446,10 +473,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun Model
       objectReference: {fileID: 0}
+    - target: {fileID: 7443952331127260726, guid: 56921842133a33843a9b292001bb4959,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
+      objectReference: {fileID: 0}
     - target: {fileID: 8485301859090190971, guid: 56921842133a33843a9b292001bb4959,
         type: 3}
       propertyPath: m_Name
       value: Gun Hurtbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485301859090190971, guid: 56921842133a33843a9b292001bb4959,
+        type: 3}
+      propertyPath: m_TagString
+      value: ExplodeOnImpact
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56921842133a33843a9b292001bb4959, type: 3}
